@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atelier Prestige Menuiseries | Contact</title>
+    <meta
+      name="description"
+      content="Contactez Atelier Prestige Menuiseries et demandez votre devis gratuit pour vos projets de menuiseries haut de gamme."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav-wrapper">
+        <a class="brand" href="index.html">Atelier Prestige</a>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="qui-sommes-nous.html">Qui sommes nous</a></li>
+            <li><a href="menuiseries.html">Nos menuiseries</a></li>
+            <li><a class="active" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <a class="btn btn-primary" href="#devis">Demande de devis</a>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section class="page-hero">
+        <div class="container narrow">
+          <p class="eyebrow">Contact</p>
+          <h1>Parlons de votre futur projet de menuiserie</h1>
+          <p class="lead">
+            Nous répondons rapidement avec une estimation précise et des recommandations adaptées
+            à vos objectifs esthétiques et techniques.
+          </p>
+        </div>
+      </section>
+
+      <section class="section-light" id="devis">
+        <div class="container contact-grid">
+          <article class="card">
+            <h2>Coordonnées</h2>
+            <p><strong>Téléphone :</strong> 01 23 45 67 89</p>
+            <p><strong>Email :</strong> contact@atelierprestige.fr</p>
+            <p><strong>Adresse :</strong> 18 rue des Artisans, 75000 Paris</p>
+            <p><strong>Horaires :</strong> Lundi au vendredi, 8h30 - 18h30</p>
+          </article>
+
+          <form class="card form-card" action="#" method="post">
+            <h2>Demande de devis</h2>
+            <p>Complétez ce formulaire, nous revenons vers vous sous 24h ouvrées.</p>
+            <label for="nom">Nom complet</label>
+            <input id="nom" name="nom" type="text" placeholder="Votre nom" required />
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="vous@email.com" required />
+
+            <label for="tel">Téléphone</label>
+            <input id="tel" name="tel" type="tel" placeholder="06 00 00 00 00" required />
+
+            <label for="projet">Votre projet</label>
+            <textarea
+              id="projet"
+              name="projet"
+              rows="5"
+              placeholder="Décrivez brièvement vos besoins (type de menuiserie, délais, localisation...)"
+              required
+            ></textarea>
+
+            <button class="btn btn-primary btn-xl" type="submit">Envoyer ma demande de devis</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <p>© 2026 Atelier Prestige Menuiseries</p>
+        <p>Intervention régionale • Lun - Ven 8h30 / 18h30</p>
+      </div>
+    </footer>
+  </body>
+</html>
