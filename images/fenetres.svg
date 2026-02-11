@@ -1,7 +1,0 @@
-<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'>
-  <defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#3b3b40'/><stop offset='1' stop-color='#595a60'/></linearGradient></defs>
-  <rect width='800' height='500' fill='url(#g)'/>
-  <rect x='160' y='70' width='480' height='360' fill='none' stroke='#f4f4f4' stroke-width='16'/>
-  <line x1='400' y1='70' x2='400' y2='430' stroke='#f4f4f4' stroke-width='12'/>
-  <line x1='160' y1='250' x2='640' y2='250' stroke='#f4f4f4' stroke-width='12'/>
-</svg>
