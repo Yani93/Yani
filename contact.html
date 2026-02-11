@@ -45,7 +45,7 @@
           <p class="eyebrow">Contact</p>
           <h1>Parlez-nous de votre projet</h1>
           <p>
-            Notre équipe vous accompagne avec des conseils concrets et un devis clair pour avancer rapidement.
+            Nous revenons vers vous rapidement avec des conseils clairs et un devis précis.
           </p>
         </div>
       </section>
@@ -53,30 +53,37 @@
       <section class="section" id="devis">
         <div class="container contact-layout">
           <article class="card contact-info">
-            <h2>Coordonnées</h2>
-            <p><strong>Téléphone :</strong> 01 23 45 67 89</p>
-            <p><strong>Email :</strong> contact@parisrenov.fr</p>
-            <p><strong>Adresse :</strong> 18 rue des Artisans, 75000 Paris</p>
+            <h2>Coordonnées directes</h2>
+            <p><strong>Samir Tahar</strong></p>
+            <p>Directeur Général</p>
+            <p><strong>Téléphone :</strong> <a href="tel:+33650072890">06 50 07 28 90</a></p>
+            <p><strong>Email :</strong> <a href="mailto:Contact@parisrenov75.fr">Contact@parisrenov75.fr</a></p>
+            <p><strong>Adresse :</strong> 117 Boulevard Soult, 75012 Paris</p>
             <p><strong>Horaires :</strong> Lundi au vendredi, 8h30 - 18h30</p>
           </article>
 
-          <form class="card form-card" action="#" method="post">
+          <form class="card form-card" action="https://formsubmit.co/yani.atek@outlook.fr" method="post">
             <h2>Demande de devis</h2>
-            <p>Remplissez ce formulaire, nous vous recontactons sous 24h ouvrées.</p>
+            <p>Remplissez ce formulaire, la demande est envoyée par email pour traitement.</p>
+
+            <input type="hidden" name="_subject" value="Nouvelle demande de devis - Paris Rénov" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
 
             <label for="nom">Nom complet</label>
-            <input id="nom" name="nom" type="text" required />
+            <input id="nom" name="Nom" type="text" required />
 
             <label for="email">Email</label>
-            <input id="email" name="email" type="email" required />
+            <input id="email" name="Email" type="email" required />
 
             <label for="tel">Téléphone</label>
-            <input id="tel" name="tel" type="tel" required />
+            <input id="tel" name="Téléphone" type="tel" required />
 
             <label for="projet">Votre projet</label>
-            <textarea id="projet" name="projet" rows="5" required></textarea>
+            <textarea id="projet" name="Projet" rows="5" required></textarea>
 
             <button class="btn btn-primary btn-lg" type="submit">Envoyer ma demande de devis</button>
+            <p class="form-note">Adresse de test de réception actuelle : yani.atek@outlook.fr</p>
           </form>
         </div>
       </section>

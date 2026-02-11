@@ -291,6 +291,28 @@ body {
   min-height: 176px;
 }
 
+
+.service-media {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 0.9rem;
+  border: 1px solid var(--line);
+}
+
+.contact-info a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.form-note {
+  margin: 0.2rem 0 0;
+  font-size: 0.84rem;
+  color: var(--muted);
+}
+
 .section-dark {
   background: linear-gradient(135deg, #36363a, #262629);
   color: var(--white);
