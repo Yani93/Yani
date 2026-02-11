@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Paris Rénov</title>
+    <meta name="description" content="Contactez Paris Rénov et recevez votre devis personnalisé pour vos projets de fenêtres, portes et volets." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="top-strip">
+      <div class="container top-strip-content">
+        <p>Un conseiller Paris Rénov vous répond sous 24h ouvrées.</p>
+        <a href="#devis">Accéder au formulaire</a>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="container nav-wrapper">
+        <a class="brand" href="index.html" aria-label="Paris Rénov">
+          <img src="logo-paris-renov.svg" alt="Logo Paris Rénov" />
+          <span>
+            <strong>PARIS RÉNOV</strong>
+            <small>FENÊTRES • PORTES • VOLETS</small>
+          </span>
+        </a>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li>
+            <li><a href="menuiseries.html">Nos menuiseries</a></li>
+            <li><a class="active" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <a class="btn btn-primary" href="#devis">Demande de devis</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container narrow">
+          <p class="eyebrow">Contact</p>
+          <h1>Parlez-nous de votre projet</h1>
+          <p>
+            Nous revenons vers vous rapidement avec des conseils clairs et un devis précis.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="devis">
+        <div class="container contact-layout">
+          <article class="card contact-info contact-card">
+            <h2>Coordonnées directes</h2>
+            <p><strong>Samir Tahar</strong></p>
+            <p>Directeur Général</p>
+            <p><strong>Téléphone :</strong> <a href="tel:+33650072890">06 50 07 28 90</a></p>
+            <p><strong>Email :</strong> <a href="mailto:Contact@parisrenov75.fr">Contact@parisrenov75.fr</a></p>
+            <p><strong>Adresse :</strong> 117 Boulevard Soult, 75012 Paris</p>
+            <p><strong>Horaires :</strong> Lundi au vendredi, 8h30 - 18h30</p>
+            <ul class="contact-badges">
+              <li>Réponse rapide</li>
+              <li>Devis gratuit</li>
+              <li>Conseil expert</li>
+            </ul>
+          </article>
+
+          <form class="card form-card form-card-beauty" action="https://formsubmit.co/yani.atek@outlook.fr" method="post">
+            <div class="form-head">
+              <h2>Demande de devis</h2>
+              <p>Complétez ce formulaire : nous vous répondons avec une estimation claire sous 24 à 48h.</p>
+            </div>
+
+            <input type="hidden" name="_subject" value="Nouvelle demande de devis - Paris Rénov" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+
+            <div class="form-grid-2">
+              <div>
+                <label for="nom">Nom complet</label>
+                <input id="nom" name="Nom" type="text" placeholder="Ex: Jean Dupont" required />
+              </div>
+              <div>
+                <label for="tel">Téléphone</label>
+                <input id="tel" name="Téléphone" type="tel" placeholder="06 00 00 00 00" required />
+              </div>
+            </div>
+
+            <label for="email">Email</label>
+            <input id="email" name="Email" type="email" placeholder="exemple@email.fr" required />
+
+            <label for="prestation">Type de menuiserie souhaitée</label>
+            <select id="prestation" name="Prestation">
+              <option value="Fenêtres">Fenêtres</option>
+              <option value="Portes">Portes</option>
+              <option value="Volets">Volets</option>
+              <option value="Baies vitrées">Baies vitrées</option>
+              <option value="Autre">Autre</option>
+            </select>
+
+            <label for="projet">Votre projet</label>
+            <textarea id="projet" name="Projet" rows="5" placeholder="Décrivez votre besoin, les dimensions approximatives, et votre délai souhaité..." required></textarea>
+
+            <label class="checkbox-row" for="rgpd">
+              <input id="rgpd" type="checkbox" required />
+              <span>J'accepte d'être recontacté(e) dans le cadre de ma demande de devis.</span>
+            </label>
+
+            <button class="btn btn-primary btn-lg btn-submit" type="submit">Envoyer ma demande de devis</button>
+            <p class="form-note">Adresse de test de réception actuelle : yani.atek@outlook.fr</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <p>© 2026 Paris Rénov</p>
+        <p>Fenêtres • Portes • Volets</p>
+        <p>Lundi au vendredi : 8h30 - 18h30</p>
+      </div>
+    </footer>
+  </body>
+</html>
