@@ -301,12 +301,12 @@ body {
 
 
 .service-media {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: contain;  /* <-- ici on voit toute l'image */
+  width: 100%;              /* prend toute la largeur de la carte */
+  height: 200px;            /* hauteur fixe pour toutes les images */
+  object-fit: cover;        /* remplit le cadre sans déformation */
+  border-radius: 12px;
   margin-bottom: 0.9rem;
   border: 1px solid var(--line);
-  background-color: var(--surface); /* optionnel, pour combler le vide autour de l'image */
 }
 .contact-info a {
   color: var(--primary);
