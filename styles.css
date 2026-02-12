@@ -281,7 +281,7 @@ body {
 }
 
 .card-service {
-  min-height: 176px;
+  min-height: auto;
 }
 
 
