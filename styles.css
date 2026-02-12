@@ -281,13 +281,14 @@ body {
   margin-top: 0;
 }
 
-.card-service {
-  background: var(--surface);
-  border-radius: var(--radius);
-  box-shadow: 0 10px 28px rgba(29, 30, 34, 0.06);
-  overflow: hidden; /* important pour que l'image épouse les coins */
-  display: flex;
-  flex-direction: column;
+.card-service { 
+  display: flex; 
+  flex-direction: column; 
+  height: 100%;
+  border-radius: var(--radius); 
+  border: 1px solid var(--line); 
+  padding: 2rem; /* ← plus grand */
+  box-shadow: 0 15px 35px rgba(29, 30, 34, 0.08);
 }
 
 .card-service { 
