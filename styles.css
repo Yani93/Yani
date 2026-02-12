@@ -307,7 +307,7 @@ body {
   border-radius: 12px;
   margin-bottom: 0.9rem;
   border: 1px solid var(--line);
-  background-color: #f4f5f7; /* optionnel, pour combler le vide autour de l'image */
+  background-color: var(--surface); /* optionnel, pour combler le vide autour de l'image */
 }
 .contact-info a {
   color: var(--primary);
