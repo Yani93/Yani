@@ -282,13 +282,12 @@ body {
 }
 
 .card-service {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 28px rgba(29, 30, 34, 0.06);
+  overflow: hidden; /* important pour que l'image épouse les coins */
   display: flex;
   flex-direction: column;
-  height: 100%;          /* toute la hauteur du grid */
-  border-radius: var(--radius);
-  border: 1px solid var(--line);
-  padding: 1.35rem;
-  box-shadow: 0 10px 28px rgba(29, 30, 34, 0.06);
 }
 
 .card-service .content {
@@ -301,13 +300,9 @@ body {
 
 .service-media {
   width: 100%;
-  flex-shrink: 0;
-  height: 200px;                 /* hauteur uniforme pour toutes les images */
-  object-fit: contain;           /* toute l’image est visible */
-  background-color: var(--surface); /* fond blanc identique à la carte */
-  border-radius: 12px;
-  margin-bottom: 0.9rem;
-  border: 1px solid var(--line);
+  height: 260px;      /* hauteur plus élégante */
+  object-fit: cover;  /* rempli toute la largeur */
+  display: block;
 }
 .contact-info a {
   color: var(--primary);
