@@ -302,11 +302,12 @@ body {
 
 .service-media {
   width: 100%;
-  aspect-ratio: 4 / 3; /* largeur/hauteur fixe relative */
-  object-fit: cover;   /* l’image remplit le cadre sans déformer */
+  aspect-ratio: 4 / 3;
+  object-fit: contain;  /* <-- ici on voit toute l'image */
   border-radius: 12px;
   margin-bottom: 0.9rem;
   border: 1px solid var(--line);
+  background-color: #f4f5f7; /* optionnel, pour combler le vide autour de l'image */
 }
 .contact-info a {
   color: var(--primary);
