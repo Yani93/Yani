@@ -304,7 +304,6 @@ body {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: contain;  /* <-- ici on voit toute l'image */
-  border-radius: 12px;
   margin-bottom: 0.9rem;
   border: 1px solid var(--line);
   background-color: var(--surface); /* optionnel, pour combler le vide autour de l'image */
