@@ -310,6 +310,11 @@ body {
   border: 1px solid var(--line);
   background-color: #f3f4f7;
   position: relative;
+  cursor: grab;
+}
+
+.slider:active {
+  cursor: grabbing;
 }
 
 .slides {
