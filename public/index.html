@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GiftCards Hub</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>GiftCards Hub</h1>
+      <p>Achetez vos cartes cadeaux Apple, Nike et Amazon en quelques clics.</p>
+
+      <section class="grid" id="products"></section>
+    </main>
+
+    <script>
+      const products = [
+        {
+          id: 'apple_50',
+          name: 'Carte cadeau Apple 50€',
+          description: 'Valable sur App Store, Apple Music et produits Apple.',
+          price: 5000,
+          color: '#111827'
+        },
+        {
+          id: 'nike_75',
+          name: 'Carte cadeau Nike 75€',
+          description: 'Utilisable sur Nike.com et dans certains magasins.',
+          price: 7500,
+          color: '#0f766e'
+        },
+        {
+          id: 'amazon_100',
+          name: 'Carte cadeau Amazon 100€',
+          description: 'Offrez la liberté de choix sur Amazon.fr.',
+          price: 10000,
+          color: '#b45309'
+        }
+      ];
+
+      const productsRoot = document.getElementById('products');
+
+      function formatPrice(cents) {
+        return new Intl.NumberFormat('fr-FR', {
+          style: 'currency',
+          currency: 'EUR'
+        }).format(cents / 100);
+      }
+
+      products.forEach((product) => {
+        const card = document.createElement('article');
+        card.className = 'card';
+        card.innerHTML = `
+          <h2 style="color:${product.color}">${product.name}</h2>
+          <p>${product.description}</p>
+          <strong>${formatPrice(product.price)}</strong>
+          <button data-id="${product.id}">Payer maintenant</button>
+        `;
+
+        const button = card.querySelector('button');
+        button.addEventListener('click', async () => {
+          button.disabled = true;
+          button.textContent = 'Redirection...';
+
+          try {
+            const response = await fetch('/create-checkout-session', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ productId: product.id })
+            });
+
+            const data = await response.json();
+            if (!response.ok) throw new Error(data.error || 'Erreur de paiement');
+            window.location.href = data.url;
+          } catch (error) {
+            alert(error.message);
+            button.disabled = false;
+            button.textContent = 'Payer maintenant';
+          }
+        });
+
+        productsRoot.appendChild(card);
+      });
+    </script>
+  </body>
+</html>
