@@ -60,7 +60,7 @@
       <section class="section">
         <div class="container grid-2">
           <article class="card card-service">
-       <div class="slider">
+      <div class="slider">
   <button class="slider-btn prev">&#10094;</button>
 
   <div class="slides">
@@ -101,34 +101,59 @@
       </div>
     </footer>
   <script>
-  document.querySelectorAll('.slider').forEach(slider => {
-    const slides = slider.querySelector('.slides');
-    const images = slides.querySelectorAll('img');
-    const prevBtn = slider.querySelector('.prev');
-    const nextBtn = slider.querySelector('.next');
+document.querySelectorAll('.slider').forEach(slider => {
 
-    let index = 0;
+  const slides = slider.querySelector('.slides');
+  const images = slider.querySelectorAll('img');
+  const prevBtn = slider.querySelector('.prev');
+  const nextBtn = slider.querySelector('.next');
 
-    function updateSlide() {
+  let index = 1;
+  const total = images.length;
+
+  // Clone première et dernière image
+  const firstClone = images[0].cloneNode(true);
+  const lastClone = images[total - 1].cloneNode(true);
+
+  slides.appendChild(firstClone);
+  slides.insertBefore(lastClone, slides.firstChild);
+
+  const allSlides = slider.querySelectorAll('.slides img');
+
+  slides.style.transform = `translateX(-100%)`;
+
+  function moveToSlide() {
+    slides.style.transition = "transform 0.5s ease-in-out";
+    slides.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  nextBtn.addEventListener('click', () => {
+    if (index >= allSlides.length - 1) return;
+    index++;
+    moveToSlide();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    if (index <= 0) return;
+    index--;
+    moveToSlide();
+  });
+
+  slides.addEventListener('transitionend', () => {
+    if (allSlides[index].isSameNode(firstClone)) {
+      slides.style.transition = "none";
+      index = 1;
       slides.style.transform = `translateX(-${index * 100}%)`;
     }
 
-    nextBtn.addEventListener('click', () => {
-      index++;
-      if (index >= images.length) {
-        index = 0;
-      }
-      updateSlide();
-    });
-
-    prevBtn.addEventListener('click', () => {
-      index--;
-      if (index < 0) {
-        index = images.length - 1;
-      }
-      updateSlide();
-    });
+    if (allSlides[index].isSameNode(lastClone)) {
+      slides.style.transition = "none";
+      index = total;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }
   });
+
+});
 </script>
   </body>
 </html>
