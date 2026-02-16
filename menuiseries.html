@@ -60,7 +60,13 @@
       <section class="section">
         <div class="container grid-2">
           <article class="card card-service">
-            <img class="service-media" src="images/fen.jpeg" alt="Fenêtres" />
+          <div class="slider">
+  <div class="slides">
+    <img src="images/fen1.jpeg" alt="Fenêtre PVC" />
+    <img src="images/fen2.jpeg" alt="Fenêtre aluminium" />
+    <img src="images/fen3.jpeg" alt="Porte-fenêtre moderne" />
+  </div>
+</div>
             <h3>Fenêtres & portes-fenêtres</h3>
             <p>Réduisez vos pertes de chaleur et améliorez le confort acoustique de votre intérieur, tout en modernisant l'esthétique de votre façade.</p>
           </article>
@@ -90,5 +96,20 @@
         <p>Lundi au vendredi : 8h30 - 18h30</p>
       </div>
     </footer>
+    <script>
+  document.querySelectorAll('.slider').forEach(slider => {
+    const slides = slider.querySelector('.slides');
+    const images = slides.querySelectorAll('img');
+    let index = 0;
+
+    setInterval(() => {
+      index++;
+      if (index >= images.length) {
+        index = 0;
+      }
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }, 3000);
+  });
+</script>
   </body>
 </html>
