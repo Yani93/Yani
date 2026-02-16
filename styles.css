@@ -290,18 +290,8 @@ body {
   padding: 2rem; /* ← plus grand */
   box-shadow: 0 15px 35px rgba(29, 30, 34, 0.08);
 }
-
-.card-service { 
-  display: flex; 
-  flex-direction: 
-  column; height: 100%; /* toute la hauteur du grid */ 
-  border-radius: var(--radius); border: 1px solid var(--line); 
-  padding: 1.35rem; 
-  box-shadow: 0 10px 28px rgba(29, 30, 34, 0.06); 
-}
-
-
-.service-media { 
+.service-media 
+{ 
   width: 100%;
   height: 280px;          /* ← taille uniforme */
   object-fit: cover;      /* remplit bien le cadre */
@@ -309,6 +299,30 @@ body {
   margin-bottom: 1.2rem;
   border: 1px solid var(--line);
   background-color: #f3f4f7;
+}
+
+.slider {
+  width: 100%;
+  height: 280px; /* même hauteur que ton ancienne image */
+  overflow: hidden;
+  border-radius: 14px;
+  margin-bottom: 1.2rem;
+  border: 1px solid var(--line);
+  background-color: #f3f4f7;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  height: 100%;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 .contact-info a {
   color: var(--primary);
