@@ -413,10 +413,31 @@ body {
 /* Contact Page Layout */
 .contact-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* horizontal */
-  gap: 1rem;
-  align-items: start;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+  align-items: stretch;
 }
+.contact-card {
+  padding: 2.5rem;
+  border-radius: 18px;
+}
+
+.contact-card h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.contact-card p {
+  margin: 0.4rem 0;
+}
+
+.contact-badges {
+  margin-top: 1.5rem;
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+
 @media (max-width: 1200px) {
   .grid-2 {
     grid-template-columns: repeat(2, 1fr);
@@ -520,5 +541,104 @@ body {
   </button>
 
 </form>
+/* ===== FORM CARD BEAUTY ===== */
+
+.form-card-beauty {
+  padding: 2.5rem;
+  border-radius: 18px;
+}
+
+.form-head h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.form-head p {
+  margin-bottom: 2rem;
+  color: var(--muted);
+}
+
+/* GRID */
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* LABEL */
+.form-card label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+/* INPUTS */
+.form-card input,
+.form-card select,
+.form-card textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  font-family: inherit;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.2s ease;
+  background: #fff;
+}
+
+/* FOCUS EFFECT */
+.form-card input:focus,
+.form-card select:focus,
+.form-card textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(74, 74, 77, 0.15);
+}
+
+/* TEXTAREA */
+.form-card textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* CHECKBOX */
+.checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  margin-bottom: 1.8rem;
+}
+
+.checkbox-row input {
+  margin-top: 4px;
+}
+
+/* BUTTON */
+.btn-submit {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+/* NOTE */
+.form-note {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+@media (max-width: 900px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 
