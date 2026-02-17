@@ -559,7 +559,7 @@ select:focus {
     flex-direction: column;
     align-items: flex-start;
   }
-  .valeurs {
+ .valeurs {
   background: #f8f8f8;
   padding: 60px 20px;
   text-align: center;
@@ -584,13 +584,31 @@ select:focus {
 }
 
 .valeur {
-  background: #ffffff;
-  padding: 30px 20px;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
   flex: 1 1 200px;
   max-width: 250px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 30px 20px;
   border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.valeur::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* voile sombre pour lisibilité */
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.valeur h3, .valeur p {
+  position: relative;
+  z-index: 1;
 }
 
 .valeur:hover {
@@ -598,17 +616,21 @@ select:focus {
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
+.valeur:hover::before {
+  background: rgba(0, 0, 0, 0.2);
+}
+
 .valeur h3 {
   text-transform: uppercase;
   font-size: 1.2em;
   margin-bottom: 15px;
-  color: #1a2e60;
+  color: #fff;
 }
 
 .valeur p {
   font-size: 0.95em;
-  color: #333;
   line-height: 1.5;
+  color: #fff;
 }
 
 /* Responsive */
@@ -621,5 +643,6 @@ select:focus {
     max-width: 90%;
   }
 }
+
 
 }
