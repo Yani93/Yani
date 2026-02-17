@@ -471,4 +471,54 @@ body {
   gap: 1rem;
   flex-wrap: wrap;
 }
+<form class="devis-form">
+
+  <div class="form-grid-2">
+    <div class="form-group">
+      <label for="nom">Nom complet</label>
+      <input type="text" id="nom" placeholder="Ex : Jean Dupont" required>
+    </div>
+
+    <div class="form-group">
+      <label for="telephone">Téléphone</label>
+      <input type="tel" id="telephone" placeholder="06 00 00 00 00" required>
+    </div>
+  </div>
+
+  <div class="form-grid-2">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="exemple@email.fr" required>
+    </div>
+
+    <div class="form-group">
+      <label for="menuiserie">Type de menuiserie</label>
+      <select id="menuiserie">
+        <option>Fenêtres</option>
+        <option>Portes d'entrée</option>
+        <option>Volets roulants</option>
+        <option>Baies vitrées</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="message">Votre projet</label>
+    <textarea id="message" rows="5"
+      placeholder="Décrivez votre besoin, les dimensions approximatives et votre délai souhaité..."></textarea>
+  </div>
+
+  <div class="form-check">
+    <input type="checkbox" id="rgpd">
+    <label for="rgpd">
+      J'accepte d'être recontacté(e) dans le cadre de ma demande de devis.
+    </label>
+  </div>
+
+  <button type="submit" class="btn btn-primary btn-full">
+    Envoyer ma demande de devis
+  </button>
+
+</form>
+
 
