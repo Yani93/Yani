@@ -495,4 +495,27 @@ body {
   .hero-content.hero-content-simple p {
     font-size: 0.95rem;
   }
+  /* Footer */
+.site-footer {
+  background: #232326;
+  color: #dddee5;
+  padding: 1.5rem 0;
+  font-family: "Inter", sans-serif;
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  max-width: 1160px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* pour le responsive */
+}
+
+.footer-grid p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
 }
