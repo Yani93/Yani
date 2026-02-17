@@ -238,7 +238,10 @@ body {
 
 
 .section {
-  padding: 4.4rem 0;
+  padding: 3rem 0;
+}
+.section-solutions {
+  padding-bottom: 1.2rem;
 }
 
 .section-heading h2,
@@ -256,7 +259,7 @@ body {
 .grid-3 {
   display: grid;
   gap: 1rem;
-  margin-top: 1.4rem;
+  margin-top: 0.8rem;
   align-items: stretch; /* <- ça force toutes les cartes à la même hauteur */
 }
 
