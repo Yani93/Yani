@@ -2,7 +2,7 @@
   --bg: #f4f5f7;
   --surface: #ffffff;
   --surface-dark: #2f2f33;
-  --text: #1e1f22;
+  --text: #1e1f22;       /* Texte principal noir foncé */
   --muted: #62636b;
   --primary: #4a4a4d;
   --primary-dark: #353539;
@@ -18,11 +18,12 @@
 body {
   margin: 0;
   font-family: "Inter", Arial, sans-serif;
-  color: var(--text);
+  color: var(--text);   /* Texte principal en noir */
   background: var(--bg);
   line-height: 1.6;
 }
 
+/* Conteneur général */
 .container {
   width: min(1160px, 92%);
   margin: 0 auto;
@@ -150,160 +151,117 @@ body {
   background: var(--primary-dark);
 }
 
-/* Page Hero / Description texte aligné à gauche */
+.btn-outline {
+  border-color: rgba(255, 255, 255, 0.6);
+  color: var(--white);
+  padding: 0.78rem 1.4rem;
+}
+
+.btn-light {
+  background: var(--white);
+  color: var(--text);
+  padding: 0.78rem 1.3rem;
+}
+
+/* Hero Section */
 .page-hero {
   padding: 4rem 0 2rem;
 }
 
-.page-hero .container.narrow {
-  text-align: left;
-  color: var(--text);
-}
-
 .page-hero h1 {
-  margin-bottom: 1rem;
+  margin: 0.6rem 0 0.8rem;
   font-size: clamp(1.9rem, 4vw, 3rem);
+  color: var(--text);   /* titre héros en noir */
 }
 
 .page-hero p {
-  margin-bottom: 1rem;
-  color: var(--text);
-  line-height: 1.7;
-}
-
-.page-hero ul {
-  margin-left: 1.4rem;
-  margin-bottom: 1.5rem;
-}
-
-.page-hero li {
-  margin-bottom: 0.6rem;
-}
-
-/* Section cartes menuiseries */
-.card-service {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 2rem;
-  box-shadow: 0 15px 35px rgba(29, 30, 34, 0.08);
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.card-service h3 {
-  margin: 1rem 0 0.5rem;
-  color: var(--text);
-}
-
-.card-service p {
   margin: 0;
-  color: var(--text);
-  line-height: 1.6;
+  color: var(--text);   /* texte héro en noir */
+  max-width: 72ch;
 }
 
-
-/* Slider images dans les cartes */
-.slider {
-  width: 100%;
-  height: 280px; /* ← taille d'origine */
-  overflow: hidden;
-  border-radius: 14px;
-  position: relative;
-  cursor: grab;
-  border: 1px solid var(--line);
-  background-color: #f3f4f7;
+/* --- Section Les 5 valeurs --- */
+.valeurs {
+  background: #f8f8f8;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
 }
 
-.slides {
+.valeurs h2 {
+  font-size: 2em;
+  color: #000000;       /* titre section valeurs en noir */
+  margin-bottom: 50px;
+}
+
+.valeurs h2 span {
+  font-weight: 700;
+}
+
+.valeurs-container {
   display: flex;
-  height: 100%;
-  transition: transform 0.5s ease-in-out;
-}
-
-.slides img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.45);
-  color: #fff;
-  border: none;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  transition: background 0.2s ease, transform 0.2s ease;
-  z-index: 2;
+  gap: 30px;
 }
 
-.slider-btn:hover {
-  background: rgba(0, 0, 0, 0.75);
-  transform: translateY(-50%) scale(1.1);
+.valeur {
+  background-size: cover;
+  background-position: center;
+  color: #fff; /* texte sur images reste blanc */
+  flex: 1 1 200px;
+  max-width: 250px;
+  padding: 30px 20px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.slider-btn.prev {
-  left: 12px;
+.valeur::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  border-radius: 10px;
+  transition: background 0.3s ease;
 }
 
-.slider-btn.next {
-  right: 12px;
+.valeur h3, .valeur p {
+  position: relative;
+  z-index: 1;
 }
 
-/* Footer */
-.site-footer {
-  background: #232326;
-  color: #dddee5;
-  padding: 1.5rem 0;
+.valeur:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-.footer-grid {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
+.valeur:hover::before {
+  background: rgba(0,0,0,0.2);
+}
+
+.valeur h3 {
+  text-transform: uppercase;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.valeur p {
+  font-size: 0.95em;
+  line-height: 1.5;
+  color: #fff;
 }
 
 /* Responsive */
-@media (max-width: 980px) {
-  .nav-wrapper {
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0.7rem 0;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .brand small {
-    display: none;
-  }
-
-  .grid-2 {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .top-strip-content,
-  .footer-grid {
+@media (max-width: 900px) {
+  .valeurs-container {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
-
-  .slider {
-    height: 250px; /* slider responsive */
+  .valeur {
+    max-width: 90%;
   }
 }
