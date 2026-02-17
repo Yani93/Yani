@@ -180,7 +180,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background-image: url('images/hero.jpg'); /* ← chemin à vérifier */
+  background-image: url('images/Hausmann.jpg'); /* ← chemin à vérifier */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
