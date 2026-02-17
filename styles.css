@@ -156,8 +156,8 @@ body {
   min-height: 72vh;
   display: flex;
   align-items: center;
-  padding: 4rem 0 2rem;
-  background-image: url('images/Hausmann.jpg'); /* image de fond */
+  padding: 5rem 0 4rem;
+  background-image: url('images/Hausmann.jpg');
   background-size: cover;
   background-position: center;
   color: var(--white);
@@ -167,27 +167,33 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.35); /* léger voile sombre pour lisibilité */
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0.3)
+  );
   z-index: 0;
 }
 
 .page-hero .container {
   position: relative;
   z-index: 1;
-  text-align: left; /* texte aligné à gauche */
+  max-width: 720px;
 }
 
 .page-hero h1 {
-  margin: 0.6rem 0 0.8rem;
-  font-size: clamp(1.9rem, 4vw, 3rem);
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.2;
 }
 
-.page-hero p {
-  margin: 0.5rem 0;
-  color: var(--white); /* blanc pour lisibilité sur fond sombre */
-  max-width: 72ch;
-  text-align: left;
+.page-hero p,
+.page-hero li {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.92);
 }
+
 
 /* Bouton Obtenir un devis */
 .cta-devis {
