@@ -203,10 +203,11 @@ body {
   line-height: 1.6;
 }
 
+
 /* Slider images dans les cartes */
 .slider {
   width: 100%;
-  height: 360px; /* ← agrandissement des photos */
+  height: 280px; /* ← taille d'origine */
   overflow: hidden;
   border-radius: 14px;
   position: relative;
