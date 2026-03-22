@@ -1,0 +1,6 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'>
+  <rect width='800' height='500' fill='#4a4a4d'/>
+  <rect x='250' y='80' width='300' height='340' fill='none' stroke='#f3f3f4' stroke-width='14'/>
+  <circle cx='500' cy='255' r='10' fill='#f3f3f4'/>
+  <rect x='285' y='120' width='110' height='110' fill='none' stroke='#f3f3f4' stroke-width='10'/>
+</svg>
